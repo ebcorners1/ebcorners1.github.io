@@ -61,7 +61,7 @@ body{
   background-image: url("../img/Boulder_block_group_photo.png");
   background-position: 100% 60%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 200%;
   background-attachment: fixed;
   overflow-x: hidden;
 }
