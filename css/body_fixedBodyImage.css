@@ -59,9 +59,9 @@ body, html {
 body{
   background-color: var(--control-bg-color);
   background-image: url("../img/Boulder_block_group_photo.png");
-  background-position: top right;
+  background-position: right 60%;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 200%;
   background-attachment: fixed;
   overflow-x: hidden;
 }
