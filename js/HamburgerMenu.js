@@ -136,7 +136,7 @@ function FontSize() {
 function addRuleSize(element, MenuIndex) {
     var wAndH = (parseInt(InnerCircleDiameter()) + ((OuterCircleDiameter()) * (MenuIndex - 1)));
     var aTop = (wAndH / 2);
-    var newRule = "nav>ul.open.ham li.CircleMenu" + MenuIndex + " {top: calc(" + ~aTop + "px + 35px); left: calc(((100% - " + wAndH + "px) / 2) - 20px); width: " + wAndH + "px; height: " + wAndH + "px;}";
+    var newRule = "nav>ul.open.ham li.CircleMenu" + MenuIndex + " {top: calc(" + ~aTop + "px + 35px); left: calc((100% - " + wAndH + "px) / 2); width: " + wAndH + "px; height: " + wAndH + "px;}";
     var sheet = document.createElement("style");
     sheet.innerHTML = newRule;
     sheet.setAttribute("id", "CircleMenu" + MenuIndex);
