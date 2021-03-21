@@ -92,10 +92,10 @@ body>section h1, section div h3 {
   text-transform: uppercase;
 }
 
-section {
+/* section {
   border-bottom: solid 3px;
   border-image: linear-gradient(90deg, transparent, var(--control-text-color), transparent) 1;
-}
+} */
 
 #home {
   height: 100vh;
@@ -474,7 +474,6 @@ div.encircle {
 footer{
   /* height: 40px; */
   background-color: var(--control-bg-color);
-  background-image: url("../Img//children-839789_1920.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
