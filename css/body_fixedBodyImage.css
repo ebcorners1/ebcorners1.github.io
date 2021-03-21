@@ -66,10 +66,6 @@ body{
   overflow-x: hidden;
 }
 
-header{
-  width: 100vw;
-}
-
 #background_image {
   display: block;
   z-index: -1;
