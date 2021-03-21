@@ -136,7 +136,8 @@ function FontSize() {
 function addRuleSize(element, MenuIndex) {
     var wAndH = (parseInt(InnerCircleDiameter()) + ((OuterCircleDiameter()) * (MenuIndex - 1)));
     var aTop = (wAndH / 2);
-    var newRule = "nav>ul.open.ham li.CircleMenu" + MenuIndex + " {top: calc(" + ~aTop + "px + 35px); left: calc((100% - " + wAndH + "px) / 2); width: " + wAndH + "px; height: " + wAndH + "px;}";
+    /* var newRule = "nav>ul.open.ham li.CircleMenu" + MenuIndex + " {top: calc(" + ~aTop + "px + 35px); left: calc((100% - " + wAndH + "px) / 2); width: " + wAndH + "px; height: " + wAndH + "px;}"; */
+    var newRule = "nav>ul.open.ham li.CircleMenu" + MenuIndex + " {top: calc(" + ~aTop + "px + 35px); transform: translate(calc((-1) * " + wAndH + "px / 2), 0px); width: " + wAndH + "px; height: " + wAndH + "px;}";
     var sheet = document.createElement("style");
     sheet.innerHTML = newRule;
     sheet.setAttribute("id", "CircleMenu" + MenuIndex);
@@ -156,10 +157,13 @@ function addRuleSize(element, MenuIndex) {
 }
 
 function addRuleOpen(element, MenuIndex) {
+    var wAndH = (parseInt(InnerCircleDiameter()) + ((OuterCircleDiameter()) * (MenuIndex - 1)));
+    var aTop = (wAndH / 2);
+
     var aHeight = ((InnerCircleDiameter() / 2) + ((MenuIndex - 1) * (OuterCircleDiameter() / 2)));
     /* var aPadding = (aHeight - parseInt(FontSize()) - (((OuterCircleDiameter() / 2) - parseInt(FontSize())) / 2)); */
     var aPadding = ((InnerCircleDiameter() / 2) + ((MenuIndex - 2) * (OuterCircleDiameter() / 2)));
-    var newRule = "nav>ul.ham.open>li span[class^='Menu" + MenuIndex + "Char'] {height: " + aHeight + "px; padding-top: " + aPadding + "px; z-index: " + (6 - MenuIndex) + ";}"
+    var newRule = "nav>ul.ham.open>li span[class^='Menu" + MenuIndex + "Char'] {height: " + aHeight + "px; padding-top: " + aPadding + "px; z-index: " + (6 - MenuIndex) + "; top: " + aTop + "px;}"
     var sheet = document.createElement("style");
     sheet.innerHTML = newRule;
     sheet.setAttribute("id", "Menu" + MenuIndex + "Char");
